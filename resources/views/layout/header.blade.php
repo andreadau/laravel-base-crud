@@ -5,9 +5,9 @@
             </div>
             <div class="links">
                     <a href="/">Home</a>
-                <a href="about">about</a>
-                <a href="blog">Blog</a>
-                <a href="posts">Posts</a>
+                <a href="/about">about</a>
+                <a href="/blog">Blog</a>
+                <a href="/posts">Posts</a>
         </div>
     </div>
 </header>
