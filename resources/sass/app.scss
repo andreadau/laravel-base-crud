@@ -5,7 +5,6 @@ body {
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
-    height: 100vh;
     margin: 0;
 }
 main {
@@ -22,26 +21,63 @@ main {
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-top: 10px;
+    margin: 5px;
     background-color: #636b6f;
-    transition: 0.3s;
+    font-weight: bold;
+    &:hover {
+        transition: 0.3s;
+        padding: 10px;
+        color: black;
+        background-color: yellow;
+    }
 }
-.container a:hover {
-    padding: 10px;
-    color: black;
-    background-color: yellow;
-}
+
 .posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 10px;
     margin: 20px;
     border: 1px solid black;
     border-radius: 20px;
-    transition: 0.6s;
+    &:hover {
+        .btn {
+            background-color: red;
+            border: 1px solid black;
+        }
+    }
+}
+
+.btn {
+    padding: 5.6px;
+    background-color: #636b6f; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size:1.2em;
+    &:hover {
+        padding: 10px;
+        transition: 0.3s;
+        border: 1px solid black;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+}
+.form-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .posts:hover {
+    transition: 0.6s;
     background-color: #636b6f;
     color: white;
 }
 .posts:hover a{
+    transition: 0.3s;
     background-color: yellow;
     color: black;
 }
@@ -80,10 +116,9 @@ main {
 }
 //create
 form{
-    width: 100%;
     label {
         display: block;
-        font-size: 2.2em;
+        font-size: 2.2rem;
         margin-bottom: 20px;
         margin-top: 20px;
     }
@@ -98,19 +133,20 @@ form{
         font-size: 1.5em;
         margin-bottom: 30px;
     }
-    button {
-        padding: 10px 20px;
-        font-size: 1.5em;
-        border: none;
-        background-color: #636b6f;
-        color: white;
-        transition: 0.5s;
-        border-radius: 5px;
-        &:hover {
-            border: 1px solid black;
-            background-color: yellow;
-            color: black;
-            cursor: pointer;
-        }
+    
+}
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #636b6f;
+    color: white;
+    transition: 0.5s;
+    border-radius: 5px;
+    &:hover {
+        border: 1px solid black;
+        background-color: yellow;
+        color: black;
+        cursor: pointer;
     }
 }

@@ -47,7 +47,7 @@ class PostController extends Controller
         $postNew->description = $data['description'];
         $postNew->save();
 
-        return redirect()->route('posts.create');
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -69,7 +69,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -81,7 +81,12 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            ]);
+        $post->update($request->all());
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -92,6 +97,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

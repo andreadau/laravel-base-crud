@@ -6,10 +6,23 @@
                 <div class="posts">
                     <h2>{{$post->title}}</h2>
                     <p>{{$post->description}}</p>
-                    <p><a href="{{ route('posts.show', $post->id) }}"><span>VIEW</span></a> | 
-                    <a href="#"><span>EDIT</span></a> | 
-                    <a href="#"><span>DELETE</span></a><p>
+                    <div class="form-group">
+                        <p>
+                            <a href="{{ route('posts.edit', ['post' => $post->id]) }}">
+                                <i class="fas fa-pen fa-md fa-fw"></i>
+                                EDIT
+                            </a>
+                        </p>
+                        <form action="{{ route('posts.destroy', ['post' => $post->id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn">
+                            <i class="fas fa-trash fa-md fa-fw"></i>
+                            DELETE
+                            </button>
+                        </form>
+                    </div>
                 </div>
-        </div>
+    </div>
     </main>
 @endsection
