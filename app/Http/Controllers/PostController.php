@@ -37,7 +37,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $data = $request->all();
+        $postNew = new Post;
+        $postNew->title = $data['title'];
+        $postNew->description = $data['description'];
+        $postNew->save();
+
+        return redirect()->route('posts.create');
     }
 
     /**

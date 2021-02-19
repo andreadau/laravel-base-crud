@@ -5,9 +5,9 @@
             </div>
             <div class="links">
                     <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="/blog">Blog</a>
-                <a href="/posts">Posts</a>
+                <a href="{{ route('about') }}">about</a>
+                <a href="{{ route('blog') }}">Blog</a>
+                <a href="{{ route('posts.index') }}">Posts</a>
         </div>
     </div>
 </header>

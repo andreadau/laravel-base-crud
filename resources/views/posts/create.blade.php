@@ -3,6 +3,7 @@
     <main>
         <form action="{{ route('posts.store') }}" method="post">
             @csrf
+            @method('POST')
             <h1>Create a new Post</h1>
             <div class="form-group">
                 <label for="title">Title</label>
