@@ -50,7 +50,13 @@ main {
     right: 10px;
     top: 18px;
 }
-
+.alert {
+    text-align: center;
+    p {
+        font-size: 2em;
+        color: red;
+    }
+}
 .content {
     text-align: center;
 }

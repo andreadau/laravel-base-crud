@@ -57,6 +57,15 @@ main {
   top: 18px;
 }
 
+.alert {
+  text-align: center;
+}
+
+.alert p {
+  font-size: 2em;
+  color: red;
+}
+
 .content {
   text-align: center;
 }

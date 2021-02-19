@@ -40,7 +40,7 @@ class PostController extends Controller
         $data = $request->all();
         $request->validate([
             'title' => 'required|unique:posts|max:255',
-            'body' => 'required',
+            'description' => 'required',
             ]);
         $postNew = new Post;
         $postNew->title = $data['title'];
